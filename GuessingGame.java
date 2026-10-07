@@ -15,7 +15,7 @@ public class GuessingGame {
             guess = input.nextInt();
             if(guess == number){
                 System.out.println("Correct");
-                break;
+                numberTrueFalse = false;
             }
             else if(guess > number){
                 System.out.println("Lower");
