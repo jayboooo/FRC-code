@@ -4,24 +4,24 @@ import java.util.Scanner;
 public class Quiz {
     public static void main(String[] args) {
         int correct = 0;
-        Scaner answer = new Scanner(System.in); 
-       System.print("what is 2 + 2: ");
+        Scanner answer = new Scanner(System.in); 
+       System.out.print("what is 2 + 2: ");
        int questionOneA = answer.nextInt();
        answer.nextLine();
-       System.out.println();
+       System.out.println("");
 
-       if (QuestioOneA == 4){
+       if (questionOneA == 4){
         System.out.println("Correct");
         correct++;
        }else{
         System.out.println("Wrong");
        }
 
-       System.out.println();
-       System.print("Is canada better than the USA: ");
+       System.out.println("");
+       System.out.print("Is canada better than the USA: ");
        String questionTwoA = answer.nextLine();
        answer.nextLine();
-       System.out.println();
+       System.out.println("");
 
        if (questionTwoA.equalsIgnoreCase("yes")){
         System.out.println("Correct");
@@ -30,11 +30,11 @@ public class Quiz {
         System.out.println("Wrong");
        }
 
-        System.out.println();
-       System.print("What year is it: ");
+        System.out.println("");
+       System.out.print("What year is it: ");
        int questionThreeA = answer.nextInt();
        answer.nextLine();
-       System.out.println();
+       System.out.println("");
 
        if (questionThreeA == 2026){
         System.out.println("Correct");
@@ -43,11 +43,11 @@ public class Quiz {
         System.out.println("Wrong");
        }
 
-       System.out.println();
-       System.print("What country are we in: ");
-       String questionFourA = answer.nextInt();
+       System.out.println("");
+       System.out.print("What country are we in: ");
+       String questionFourA = answer.nextLine();
        answer.nextLine();
-       System.out.println();
+       System.out.println("");
 
        if (questionFourA.equalsIgnoreCase("Isreal")){
         System.out.println("Correct");
@@ -56,11 +56,11 @@ public class Quiz {
         System.out.println("Wrong");
        }
 
-       System.out.println();
-       System.print("What is ther square root of 9: ");
-       Int questionFiveA = answer.nextInt();
+       System.out.println("");
+       System.out.print("What is ther square root of 9: ");
+       int questionFiveA = answer.nextInt();
        answer.nextLine();
-       System.out.println();
+       System.out.println("");
 
        if (questionFiveA == 3){
         System.out.println("Correct");
@@ -69,7 +69,7 @@ public class Quiz {
         System.out.println("Wrong");
        }
 
-       System.out.println(0);
+       System.out.println("");
        System.out.println(correct);
 
         
