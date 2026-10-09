@@ -17,6 +17,7 @@ public class StudentGrades {
         }
 
         int userChoice = 0;
+        int highStudent = 0;
 
         while(userChoice != 4){
             System.out.println("1: Show all scores.\n2: Show highest score \n3: Show average score \n4: Exit");
@@ -34,14 +35,16 @@ public class StudentGrades {
             }else if(userChoice == 2){
                 int highScore = 0;
                 for(int i = 0; i < length; i++){
-                    if(numstudent[i] > highScore){
+                    if(numStudent[i] > highScore){
                         highScore = numStudent[i];
+                        highStudent = i;
                     }
 
-                    System.out.println("The student with the highest score is student " + (i+1) + "with a grade of: " + numStudent[i] + "%");
-                    System.out.println();
-                    System.out.println();
+                    
                 }
+                System.out.println("The student with the highest score is student " + (highStudent+1) + "  with a grade of: " + numStudent[highStudent] + "%");
+                    System.out.println();
+                    System.out.println();
 
             }else if(userChoice == 3){
 
