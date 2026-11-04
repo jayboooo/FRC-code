@@ -5,6 +5,7 @@ import edu.wpi.first.wpilibj2.command.Command;
     public class ShootCommand extends Command {
 
         int distance = 1;
+        ShootSubSytem Shoot = new ShootSubSytem();
         public ShootCommand(ShootSubSytem Shoot){
             this.Shoot = Shoot;
             addRequirements(Shoot);
@@ -12,17 +13,17 @@ import edu.wpi.first.wpilibj2.command.Command;
 
 
         public void initialize(){
-            ShootCommand.setSpeed(1);
+            Shoot.setSpeed(1);
         }
 
         public void execute(){
-            double shootSpeed = ShootCommand.getAim(distance);
+            double shootSpeed = Shoot.getAim(distance);
             if(shootSpeed > 1){
                 shootSpeed = 1;
             }else if(shootSpeed < -1){
                 shootSpeed = -1;
             }
-            ShootCommand.setSpeed(shootSpeed);
+            Shoot.setSpeed(shootSpeed);
             
         }
 
@@ -33,7 +34,7 @@ import edu.wpi.first.wpilibj2.command.Command;
 
         public void end(boolean interrupted){
 
-            ShootCommand.setSpeed(0);
+            Shoot.stop();
         }
 
 
