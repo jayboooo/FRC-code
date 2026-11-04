@@ -6,14 +6,15 @@ public class GuessingGame {
     public static void main(String[] args) {
         Random random = new Random();
         Scanner input = new Scanner(System.in);
-        int number = random.nextInt(1,101);
+        int number = random.nextInt(1,10001);
         Boolean numberTrueFalse = true;
         int guess;
-        System.out.println("Guess my number 1-100");
+        System.out.println("Guess my number 1-10000");
         while(numberTrueFalse){
 
             guess = input.nextInt();
             if(guess == number){
+    
                 System.out.println("Correct");
                 numberTrueFalse = false;
             }

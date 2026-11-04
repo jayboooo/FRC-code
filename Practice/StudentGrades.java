@@ -47,6 +47,12 @@ public class StudentGrades {
                     System.out.println();
 
             }else if(userChoice == 3){
+                int average = numStudent[0];
+                for(int i = 1; i < length; i++){
+                    average += numStudent[i];    
+                }
+                average /= length;
+                System.out.println("The class average is: " +  average + "%");
 
             }else{
                 break;

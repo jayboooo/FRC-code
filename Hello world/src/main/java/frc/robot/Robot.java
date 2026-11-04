@@ -6,7 +6,7 @@ package frc.robot;
 
 import com.ctre.phoenix6.hardware.TalonFX;
 import edu.wpi.first.wpilibj.AnalogInput;
-
+import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
@@ -20,8 +20,9 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 public class Robot extends TimedRobot {
 
 
-  TalonFX motor = new TalonFX(0);
+  TalonFX motor = new TalonFX(3);
   final XboxController m_driverJoy = new XboxController(0);
+    DigitalInput irInput = new DigitalInput(9);
   private static final String kDefaultAuto = "Default";
   private static final String kCustomAuto = "My Auto";
   private String m_autoSelected;
@@ -50,8 +51,24 @@ public class Robot extends TimedRobot {
   @Override
   public void robotPeriodic() {
     if(m_driverJoy.getAButton()){
-      motor.set(0.5);
+      motor.set(0.2);
     }
+
+    if(m_driverJoy.getXButton()){
+      motor.set(0);
+    }
+    if(m_driverJoy.getBButtonPressed()){
+      motor.set(m_driverJoy.getLeftTriggerAxis());
+
+    }
+
+    if(irInput.get()){
+      motor.set(-0.3);
+    }
+    else{
+      motor.set(0);
+    }
+    SmartDashboard.putBoolean("jo", irInput.get());
   }
 
   /**
