@@ -1,9 +1,11 @@
+package frc.robot;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
-import frc.robot.ShootSubSytem;
+ExtenedIntakeCommandr controller = new XboxController(2);
 
 public class IntakeCommand extends Command {
-
+  
+// here is the code for the intake command
 
         IntakeSubSystem intake = new IntakeSubSystem();
         public IntakeCommand(IntakeSubSystem intake){
@@ -13,7 +15,8 @@ public class IntakeCommand extends Command {
 
 
         public void initialize(){
-            XboxController controller = new XboxController(1);
+            
+             extened_encoder.reset();
         }
 
         public void execute(){
@@ -34,12 +37,4 @@ public class IntakeCommand extends Command {
         public void end(boolean interrupted){
             intake.stop();
         }
-
-
-
-
-
-
-
-
 }
