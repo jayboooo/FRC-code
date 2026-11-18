@@ -5,7 +5,7 @@ ExtenedIntakeCommandr controller = new XboxController(2);
 
 public class IntakeCommand extends Command {
   
-
+// here is the code for the intake command
 
         IntakeSubSystem intake = new IntakeSubSystem();
         public IntakeCommand(IntakeSubSystem intake){
