@@ -7,7 +7,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class IntakeSubSystem extends SubsystemBase {
 
-
+// here is the code for the intake subsystem
     TalonFX intakeExtenedMotor = new TalonFX(constants.intakeConstants.intakeExtenedMotor);
     TalonFX intakeRunMotor = new TalonFX(constants.intakeConstants.intakeRunMotor);
     public static Encoder extened_encoder = new Encoder(constants.intakeConstants.intakeEncoderChannelA, constants.intakeConstants.intakeEncoderChannelB);
