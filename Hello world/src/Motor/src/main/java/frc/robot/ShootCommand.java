@@ -3,7 +3,7 @@ package frc.robot;
 import edu.wpi.first.wpilibj2.command.Command;
 
     public class ShootCommand extends Command {
-
+// here is the code for the shoot command
         int distance = 1;
         ShootSubSytem Shoot = new ShootSubSytem();
         public ShootCommand(ShootSubSytem Shoot){
